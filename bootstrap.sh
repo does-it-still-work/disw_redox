@@ -1,9 +1,20 @@
 #!/bin/bash
 
-apt update
-apt install -y wget curl
+set -x -e
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt update
+sudo apt install -y wget curl
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs -o rustup.sh
+bash rustup.sh -y
+
+source $HOME/.cargo/env
+
+echo 'source $HOME/.cargo/env' >> .profile
+
+
+sudo apt install -y g++
+
 
 cargo install xargo
 
