@@ -12,8 +12,6 @@ curl -sf https://gitlab.redox-os.org/redox-os/redox/raw/master/bootstrap.sh -o b
 
 yes | bash -e bootstrap.sh
 
-cargo install xargo
-
 cd redox
 make all
 make qemu
