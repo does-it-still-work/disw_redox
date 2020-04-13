@@ -6,6 +6,6 @@ Vagrant.configure("2") do |config|
 		v.memory = 8096
 		v.cpus = 8
 	end
-	config.vm.box = "hashicorp/bionic64"
+	config.vm.box = "generic/ubuntu1804"
 	config.vm.provision :shell, path: "bootstrap.sh"
 end
