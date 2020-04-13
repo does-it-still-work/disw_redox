@@ -8,8 +8,8 @@ Vagrant.configure("2") do |config|
 		v.memory = 8096
 		v.cpus = 8
 		# Vagrant needs this config on AppVeyor to spin up correctly (see https://help.appveyor.com/discussions/problems/1247-vagrant-not-working-inside-appveyor)
-        vb.customize ["modifyvm", :id, "--nictype1", "Am79C973"]
-        vb.customize ['modifyvm', :id, '--cableconnected1', 'on']
+        v.customize ["modifyvm", :id, "--nictype1", "Am79C973"]
+        v.customize ['modifyvm', :id, '--cableconnected1', 'on']
 	end
 	config.vm.box = "generic/ubuntu1804"
 
