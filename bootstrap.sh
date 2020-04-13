@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt update
-apt install -y fish wget curl yes
+apt install -y fish wget curl
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
