@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
 
 	config.vm.provider :libvirt do |libvirt|
 		libvirt.driver = "qemu"
-		libvirt.memory = 8096
+		libvirt.memory = 4096
   	end
   	
 	config.vm.box = "debian/buster64"
